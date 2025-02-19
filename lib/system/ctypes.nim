@@ -31,6 +31,8 @@ else:
       ## This is the same as the type `unsigned long` in *C*.
 
 type # these work for most platforms:
+  cbool* {.importc: "bool", nodecl.} = uint8
+    ## C99 revison adds bool which is equiv to uint8? XXX: C23 redefines to bool no uint8
   cchar* {.importc: "char", nodecl.} = char
     ## This is the same as the type `char` in *C*.
   cschar* {.importc: "signed char", nodecl.} = int8
